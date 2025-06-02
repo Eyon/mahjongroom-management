@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,18 +25,33 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
-      <div className="login-form-group">
-        <label htmlFor="username" className="login-label">用户名</label>
-        <input id="username" className="login-input" placeholder="请输入用户名" required />
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="space-y-2">
+        <Label htmlFor="username" className="text-gray-300">用户名</Label>
+        <Input 
+          id="username" 
+          className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          placeholder="请输入用户名" 
+          required 
+        />
       </div>
-      <div className="login-form-group">
-        <label htmlFor="password" className="login-label">密码</label>
-        <input id="password" type="password" className="login-input" placeholder="请输入密码" required />
+      <div className="space-y-2">
+        <Label htmlFor="password" className="text-gray-300">密码</Label>
+        <Input 
+          id="password" 
+          type="password" 
+          className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          placeholder="请输入密码" 
+          required 
+        />
       </div>
-      <button type="submit" className="login-btn" disabled={isLoading}>
+      <Button 
+        type="submit" 
+        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition-colors"
+        disabled={isLoading}
+      >
         {isLoading ? "登录中..." : "登录"}
-      </button>
+      </Button>
     </form>
   );
 }
