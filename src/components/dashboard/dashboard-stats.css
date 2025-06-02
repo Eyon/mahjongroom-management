@@ -1,0 +1,39 @@
+.dashboard-stats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.dashboard-stats-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.dashboard-stats-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dashboard-stats-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dashboard-stats-description {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+} 

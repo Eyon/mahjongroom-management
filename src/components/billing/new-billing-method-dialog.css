@@ -1,0 +1,43 @@
+.billing-dialog {
+  max-width: 500px;
+}
+
+.billing-form {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-label {
+  text-align: right;
+}
+
+.form-label.description-label {
+  padding-top: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.form-input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-unit {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.form-textarea {
+  width: 100%;
+} 

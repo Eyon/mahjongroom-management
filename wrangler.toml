@@ -1,0 +1,10 @@
+name = "mahjong-management"
+compatibility_date = "2024-06-02"
+
+[site]
+bucket = "./public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mahjong-db"
+database_id = "b038dba6-59e2-41cd-976a-54432d88f405"
